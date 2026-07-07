@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antié · Dashboards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#263C99;--orange:#F4791E;--cream:#FBF1DE;--ink:#22284B;--muted:#6b6f8f;}
+*{box-sizing:border-box;}
+body{margin:0;min-height:100vh;background:linear-gradient(160deg,var(--navy),#141c52);
+  font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;padding:24px;}
+.wrap{max-width:640px;width:100%;text-align:center;}
+.wrap img{max-width:220px;margin-bottom:8px;}
+.brand-fallback{display:none;font-family:'Baloo 2',sans-serif;font-size:48px;color:#fff;font-weight:800;margin-bottom:8px;}
+.wrap p.tag{color:#cdd3f5;font-size:14px;margin:0 0 34px;}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:520px){.cards{grid-template-columns:1fr;}}
+a.card{display:block;background:#fff;border-radius:20px;padding:28px 20px;text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);transition:transform .15s ease;}
+a.card:hover{transform:translateY(-4px);}
+a.card .icon{width:44px;height:44px;border-radius:12px;margin:0 auto 14px;background:var(--orange);
+  clip-path:polygon(30% 0,100% 0,70% 100%,0 100%);}
+a.card.b .icon{background:var(--navy);clip-path:none;border-radius:50%;}
+a.card h2{font-family:'Baloo 2',sans-serif;font-size:19px;color:var(--ink);margin:0 0 6px;}
+a.card p{font-size:13px;color:var(--muted);margin:0;}
+footer{color:#a9b0dc;font-size:12px;margin-top:30px;}
+footer a{color:#fff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img src="logo.png" alt="Antié" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+  <div class="brand-fallback">Antié</div>
+  <p class="tag">Fermentación con propósito · Dashboards en vivo</p>
+  <div class="cards">
+    <a class="card a" href="dashboard.html">
+      <div class="icon"></div>
+      <h2>Dashboard Comercial</h2>
+      <p>Ventas, catálogo, finanzas y objetivos</p>
+    </a>
+    <a class="card b" href="produccion.html">
+      <div class="icon"></div>
+      <h2>Dashboard de Producción</h2>
+      <p>Ingredientes, proveedores, costes y márgenes</p>
+    </a>
+  </div>
+  <footer>Datos en vivo desde Google Sheets · <a href="https://antiefoods.com" target="_blank">antiefoods.com</a></footer>
+</div>
+</body>
+</html>
